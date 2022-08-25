@@ -38,11 +38,12 @@ body {
   background-color: rbga(255, 255, 255, 0.75);
 }
 
+/* Button turns grey when your mouse cursor hovers over it.*/
+
 .calculator-grid > button:hover {
   background-color: #a9a9a9;
   transition: all 2s ease;
 }
-/* Button turns grey when your mouse cursor hovers over it.*/
 
 .span-two {
   grid-column: span 2;
