@@ -1,0 +1,73 @@
+/* before and after psudo elements */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Gotham Rounded, sans-serif;
+  font-weight: bold;
+}
+
+.container {
+  color: black;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 80px;
+}
+body {
+  background: linear-gradient(to right, #cbce91ff, #ea738dff);
+}
+
+.calculator-grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+/* The next step is to style the calculator-grid div that we defined earlier. It wraps all of our different buttons and elements. We can set the display to grid. We can also use the justify-content attribute to set it to the center of the screen. Besides, the align-content attribute can help align items to the center of the screen. */
+
+.calculator-grid > button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px, solid #ffffff;
+  outline: none;
+  background-color: rbga(255, 255, 255, 0.75);
+}
+
+.calculator-grid > button:hover {
+  background-color: #a9a9a9;
+  transition: all 2s ease;
+}
+/* Button turns grey when your mouse cursor hovers over it.*/
+
+.span-two {
+  grid-column: span 2;
+  color: #adf802;
+  background-color: rgba(139, 0, 139, 0.8);
+}
+
+.output {
+  grid-column: 1 / -1;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.output .previous-operand {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.5rem;
+}
+
+.output .current-operand {
+  color: white;
+  font-size: 2.5rem;
+}
